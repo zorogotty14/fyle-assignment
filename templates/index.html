@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Assignment</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static',filename='css/style.css') }}"
+    />
+  </head>
+  <body>
+    <!-- Heading and globe -->
+    <section class="hero">
+      <div class="hero-main">
+        <h1 class="hero-title">Looking for a <br />Lollipop alternative?</h1>
+        <p class="hero-desc">
+          Lorem Ipsum is simply dummy text of the printing and typesetting<br />
+          industry. Lorem Ipsum has been the industry's standard dummy<br />
+          text ever since the 1500s.
+        </p>
+
+        <button class="btn1"><strong>Primary CTA</strong></button>
+        <button class="btn2"><strong>Secondary CTA</strong></button>
+      </div>
+      <div class="hero-sec">
+        <img
+          class="globe"
+          src="{{ url_for('static', filename='images/globe.png') }}"
+          alt="Globe"
+        />
+      </div>
+    </section>
+
+    <!-- table column-->
+    <div id="pic-bg-holder">
+      <section class="pic-BG">
+        <h1 class="table-header">
+          This is a heading in <br />
+          two lines
+        </h1>
+        <img
+          class="table-pic"
+          src="{{ url_for('static', filename='images/table.png') }}"
+          alt="table"
+        />
+      </section>
+    </div>
+
+    <!-- Main content -->
+    <section style="text-align: center;">
+      <h1 class="MC-header">Compare pricing today!</h1>
+      <p style="color: #8b8e91; margin-top: 1%;">
+        Lorem Ipsum is simply dummy text of the printing and
+        <span style="color: #0099ff;">typesetting.</span>
+      </p>
+
+      <button id="serve1" class="rectangle" onclick="calculateCost(25)">
+        <strong>25 serving</strong>
+      </button>
+      <button id="serve2" class="rectangle" onclick="calculateCost(50)">
+        <strong>50 serving</strong>
+      </button>
+      <button id="serve3" class="rectangle-active" onclick="calculateCost(100)">
+        <strong>100 serving</strong>
+      </button>
+      <button id="serve4" class="rectangle" onclick="calculateCost(200)">
+        <strong>200 serving</strong></button
+      ><br />
+
+      <!-- Annual and monthly -->
+      <div
+        style="display: flex; justify-content: center; align-items: center; margin-top: 1%;"
+      >
+        <div style="display: flex; flex-direction: column; margin-right: 10px;">
+          <div><strong>Annual</strong></div>
+          <div>
+            <span style="color: #8b8e91; font-size: 14px;">50% off</span>
+          </div>
+        </div>
+
+        <div>
+          <label class="switch">
+            <input id="planToggle" type="checkbox" checked />
+            <span class="slider round"></span>
+          </label>
+        </div>
+
+        <div style="margin-left: 10px;">
+          <strong>Monthly</strong>
+        </div>
+      </div>
+    </section>
+
+    <!-- cards -->
+    <section class="card-views">
+      <div class="card">
+        <p class="card-title">
+          <strong>lollipop</strong>
+        </p>
+        <p class="card-desc">
+          <span class="card-price"><strong id="value1">$100</strong></span
+          ><span style="color: #8b8e91;"> per month</span><br />
+          For <span id="value2">100 </span> serving
+        </p>
+      </div>
+
+      <div class="card">
+        <p class="card-title">
+          <strong>Icecandy</strong>
+        </p>
+        <p class="card-desc">
+          <span class="card-price"><strong id="value3">$100</strong></span
+          ><span style="color: #8b8e91;"> per month</span><br />
+          For <span id="value4">100 </span> serving
+        </p>
+      </div>
+
+      <div class="card-big">
+        <p class="card-title">
+          <strong>Your savings<br />with lollipop</strong>
+        </p>
+        <p class="card-desc">
+          <span class="card-price"><strong id="value5">$100</strong></span
+          ><br /><span style="color: #8b8e91;"> per month</span>
+        </p>
+      </div>
+    </section>
+    <br /><br />
+
+    <!-- pic -->
+    <section class="pic">
+      <div class="pic1">
+        <h1 class="pic-header">Here’s what our customers have to say</h1>
+        <img
+          src="{{ url_for('static', filename='images/pic.png') }}"
+          class="pic-man"
+          alt="MAN"
+        />
+        <p class="pic-desc">
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since the 1500s.
+        </p>
+        <p class="pic-sec"><strong>Raja Ram</strong></p>
+        <p class="pic-sec1">Tip World</p>
+        <ul class="bullet-holder">
+          <li class="pic-bullets"></li>
+          <li class="pic-bullet"></li>
+          <li class="pic-bullet"></li>
+          <li class="pic-bullet"></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Bottom -->
+    <section class="bottom">
+      <div class="bottom-main">
+        <h1 class="bottom-title">
+          Loved by users, <br />recommended by experts
+        </h1>
+        <p class="bottom-desc">
+          Lorem Ipsum is simply dummy text of the printing<br />
+          and typesetting industry. Lorem Ipsum has been the <br />industry's
+          standard dummy text ever since the<br />
+          1500s.
+        </p>
+
+        <button class="btn1" style="margin-top: 30px;">
+          <strong>Primary CTA</strong>
+        </button>
+      </div>
+      <div class="bottom-sec">
+        <img
+          class="bag"
+          src="{{ url_for('static', filename='images/bag.png') }}"
+          alt="Bag"
+        />
+      </div>
+    </section>
+  </body>
+
+  <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</html>
